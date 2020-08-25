@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
-const xip = require('./xip')
+const mongoose = require("mongoose");
+const Xip = require('./xip');
 
 const xipsoloSchema = new mongoose.Schema({
     name: String,

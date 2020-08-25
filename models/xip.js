@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Xipsolo = require('./xipsolo');
 
-const XipSchema = new Schema({
-    title: String,
+const xipSchema = new mongoose.Schema({
+    name: { type: String, required: true },
     publisher: String,
     coverArtUrl: String,
+    comments: String,
     completed: Boolean,
 });
 
-const Xip = mongoose.model('Xip', XipSchema);
+const Xip = mongoose.model('Xip', xipSchema);
 
 module.exports = Xip;

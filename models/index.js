@@ -14,4 +14,6 @@ mongoose.connect(connectionString, configOptions)
 
 module.exports = {
     
+    Xipsolo: require('./xipsolo'),
+    Xip: require('./xip')
 }
