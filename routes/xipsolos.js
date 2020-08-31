@@ -3,8 +3,6 @@ const router = express.Router()
 const xipsolosController = require('../controllers/xipsolos')
 
 // ROUTES
-// NEW
-router.get('/new', xipsolosController.new)
 
 // CREATE
 router.post('/', xipsolosController.create)
@@ -16,13 +14,8 @@ router.get('/', xipsolosController.index)
 router.get('/:id', xipsolosController.show)
 
 // DELETE
-router.delete('/:id', xipsolosController.delete)
+router.delete('/:id', xipsolosController.destroy)
 
-// EDIT
-router.get('/:id/edit', xipsolosController.edit)
-
-// ADD XIP TO XIPSOLO
-router.get('/:id/add', xipsolosController.newXip)
 
 // UPDATE
 router.put('/:id', xipsolosController.update)

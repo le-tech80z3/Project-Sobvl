@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connectionString = 'mongodb://localhost/sobvl'
+const connectionString = process.env.MONGODB_URI || "mongodb://localhost:27017/sobvl"
 const configOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -15,5 +15,6 @@ mongoose.connect(connectionString, configOptions)
 module.exports = {
     
     Xipsolo: require('./xipsolo'),
-    Xip: require('./xip')
+    Xip: require('./xip'),
+    User: require('./user')
 }

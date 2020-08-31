@@ -32,6 +32,7 @@ const create = (req, res) => {
     })
 }
 
+
 const update = (req, res) => {
     const options = { new: true }
     db.Xipsolo.findByIdAndUpdate(req.params.id, req.body, options, (err, updatedXipsolo) => {
