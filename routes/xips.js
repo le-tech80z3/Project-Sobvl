@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const xipsController = require('../controllers/xips')
+const xipsController = require('../controller/xips')
 
 // ROUTES
 // NEW

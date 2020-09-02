@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const passport = require('../passport')
-const ctrl = require('../controllers')
+const ctrl = require('../controller')
 
 
 router.post('/login', passport.authenticate('local'), ctrl.auth.login)

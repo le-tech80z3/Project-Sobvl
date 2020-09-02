@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const ctrl = require('../controllers')
+const ctrl = require('../controller')
 
 router.get('/:id', ctrl.users.show)
 
