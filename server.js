@@ -4,7 +4,7 @@ const cors = require('cors')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport')
-
+const mongoose = require('mongoose')
 
 const PORT = process.env.PORT || 3002
 const app = express();
@@ -34,6 +34,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24
     }
 }))
+
 
 // middleware - passport
 app.use(passport.initialize())
